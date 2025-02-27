@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`XIcon should match snapshot 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight={32}
+  bbWidth={32}
+  fill="none"
+  focusable={false}
+  height={32}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  stroke="red"
+  strokeLinecap="round"
+  strokeLinejoin="round"
+  strokeWidth="2"
+  style={
+    [
+      {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
+      },
+      {
+        "flex": 0,
+        "height": 32,
+        "width": 32,
+      },
+    ]
+  }
+  testID="x-icon"
+  vbHeight={24}
+  vbWidth={24}
+  width={32}
+>
+  <RNSVGGroup
+    fill={null}
+    propList={
+      [
+        "fill",
+        "stroke",
+        "strokeWidth",
+        "strokeLinecap",
+        "strokeLinejoin",
+      ]
+    }
+    stroke={
+      {
+        "payload": 4294901760,
+        "type": 0,
+      }
+    }
+    strokeLinecap={1}
+    strokeLinejoin={1}
+    strokeWidth="2"
+  >
+    <RNSVGLine
+      fill={
+        {
+          "payload": 4278190080,
+          "type": 0,
+        }
+      }
+      x1="4"
+      x2="15"
+      y1="4"
+      y2="15"
+    />
+    <RNSVGLine
+      fill={
+        {
+          "payload": 4278190080,
+          "type": 0,
+        }
+      }
+      x1="15"
+      x2="4"
+      y1="4"
+      y2="15"
+    />
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;
