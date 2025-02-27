@@ -18,6 +18,12 @@ export default function AppNavigator() {
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
+            headerShadowVisible: false,
+
+            contentStyle: {
+              borderTopColor: colors.border,
+              borderTopWidth: 1,
+            },
             gestureEnabled:true,
             headerTitle: () => (
               <View style={globalStyles.navContainer}>
