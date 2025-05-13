@@ -8,9 +8,10 @@ interface Props {
   products: Product[];
   navigation: any;
   refreshControl?: JSX.Element;
+  onPress:(Product:Product)=>void
 }
 
-export default function ProductList({ products, navigation, refreshControl }: Props) {
+export default function ProductList({ products, refreshControl, onPress }: Props) {
   return (
     <View style={globalStyles.listContainer}>
       <FlatList
@@ -19,7 +20,7 @@ export default function ProductList({ products, navigation, refreshControl }: Pr
         data={products}
         keyExtractor={item => item.id}
         renderItem={({ item, index }) => (
-          <ProductItem product={item} navigation={navigation} length={products.length} index={index} />
+          <ProductItem product={item} length={products.length} index={index} onPress={onPress} />
         )}
         refreshControl={refreshControl}
       />

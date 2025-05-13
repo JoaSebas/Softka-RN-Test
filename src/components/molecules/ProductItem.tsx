@@ -6,12 +6,13 @@ import { Product } from '../../models/Product';
 
 interface Props {
   product: Product;
-  navigation: any;
   length: number;
   index: number;
+  onPress: (Product:Product)=>void;
+
 }
 
-export default function ProductItem({ product, navigation, length, index }: Props) {
+export default function ProductItem({ product, length, index, onPress }: Props) {
   return (
     <TouchableOpacity
       testID="product-item"
@@ -19,7 +20,7 @@ export default function ProductItem({ product, navigation, length, index }: Prop
         globalStyles.listItem,
         length > 1 && index + 1 !== length ? globalStyles.borderItem : {},
       ]}
-      onPress={() => navigation.navigate('ProductDetail', { id: product.id })}
+      onPress={()=>onPress(product)}
     >
       <View>
         <Text style={globalStyles.listItemText}>{product.name}</Text>

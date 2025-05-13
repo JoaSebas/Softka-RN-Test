@@ -10,7 +10,7 @@ export interface IProductsService {
 }
 
 export class ProductsService implements IProductsService {
-  private BASE_URL = 'http://192.168.1.116:3002';
+  private BASE_URL = 'http://192.168.7.5:3002';
 
   async getAll(): Promise<Product[]> {
     const resp = await fetch(`${this.BASE_URL}/bp/products`);

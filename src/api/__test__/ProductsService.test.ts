@@ -27,7 +27,7 @@ describe('ProductsService', () => {
 
     const products = await service.getAll();
     expect(products).toEqual([mockProduct]);
-    expect(fetch).toHaveBeenCalledWith('http://192.168.1.116:3002/bp/products');
+    expect(fetch).toHaveBeenCalledWith('http://192.168.7.5:3002/bp/products');
   });
 
   it('should fetch and return a product by ID', async () => {
@@ -51,7 +51,7 @@ describe('ProductsService', () => {
 
     const exists = await service.verifyId('123');
     expect(exists).toBe(true);
-    expect(fetch).toHaveBeenCalledWith('http://192.168.1.116:3002/bp/products/verification/123');
+    expect(fetch).toHaveBeenCalledWith('http://192.168.7.5:3002/bp/products/verification/123');
   });
 
   it('should create a product', async () => {
@@ -62,20 +62,20 @@ describe('ProductsService', () => {
 
     const createdProduct = await service.create(mockProduct);
     expect(createdProduct).toEqual(mockProduct);
-    expect(fetch).toHaveBeenCalledWith('http://192.168.1.116:3002/bp/products', expect.any(Object));
+    expect(fetch).toHaveBeenCalledWith('http://192.168.7.5:3002/bp/products', expect.any(Object));
   });
 
   it('should update a product', async () => {
     (fetch as jest.Mock).mockResolvedValueOnce({});
 
     await service.update('123', mockProduct);
-    expect(fetch).toHaveBeenCalledWith('http://192.168.1.116:3002/bp/products/123', expect.any(Object));
+    expect(fetch).toHaveBeenCalledWith('http://192.168.7.5:3002/bp/products/123', expect.any(Object));
   });
 
   it('should delete a product', async () => {
     (fetch as jest.Mock).mockResolvedValueOnce({});
 
     await service.remove('123');
-    expect(fetch).toHaveBeenCalledWith('http://192.168.1.116:3002/bp/products/123', { method: 'DELETE' });
+    expect(fetch).toHaveBeenCalledWith('http://192.168.7.5:3002/bp/products/123', { method: 'DELETE' });
   });
 });
